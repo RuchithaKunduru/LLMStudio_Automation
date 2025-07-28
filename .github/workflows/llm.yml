@@ -15,6 +15,8 @@ jobs:
       test_status: ${{ steps.set_status.outputs.status }}
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,7 +38,9 @@ jobs:
 
       - name: Generate Custom HTML Report
         if: always()
-        run: npm run report || echo "REPORT_FAILED=true" >> $GITHUB_ENV
+        run: |
+          npm run report || echo "REPORT_FAILED=true" >> $GITHUB_ENV
+          cp -r test/test-report html-report  # <-- Ensures html-report exists
 
       - name: Take Screenshot of Report
         if: always()
@@ -114,9 +118,3 @@ jobs:
             Regards,  
             GitHub CI Bot
           attachments: ./html-report/report-screenshot.png
-
-
-
-
-
-
