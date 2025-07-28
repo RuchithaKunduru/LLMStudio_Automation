@@ -1,0 +1,122 @@
+name: Run Tests and Publish HTML Report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    outputs:
+      test_status: ${{ steps.set_status.outputs.status }}
+
+    steps:
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Run Cucumber Tests
+        id: run_tests
+        env:
+          CI: true
+        run: |
+          npm run test || echo "TEST_FAILED=true" >> $GITHUB_ENV
+
+      - name: Generate Custom HTML Report
+        if: always()
+        run: npm run report || echo "REPORT_FAILED=true" >> $GITHUB_ENV
+
+      - name: Take Screenshot of Report
+        if: always()
+        run: |
+          npm install puppeteer
+          node capture-screenshot.js || echo "SCREENSHOT_FAILED=true" >> $GITHUB_ENV
+
+      - name: Upload Report and Screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report-assets
+          path: |
+            ./html-report
+            ./report-screenshot.png
+
+      - name: Set Job Status
+        id: set_status
+        if: always()
+        run: echo "status=${{ job.status }}" >> $GITHUB_OUTPUT
+
+  deploy:
+    needs: test
+    if: ${{ needs.test.outputs.test_status == 'success' }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Report Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: html-report-assets
+          path: site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site/html-report
+
+  notify:
+    needs: [test, deploy]
+    if: always()
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Download Report Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: html-report-assets
+          path: html-report
+
+      - name: Send Result Email
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: |
+            🧪 Test Report - ${{ github.repository }} - Status: ${{ needs.test.outputs.test_status }}
+          to: ${{ secrets.EMAIL_TO }}
+          from: GitHub CI <${{ secrets.EMAIL_USERNAME }}>
+          body: |
+            Hello Team,
+
+            The test run for `${{ github.repository }}` has **${{ needs.test.outputs.test_status }}**.
+
+            ✅ Trigger: "${{ github.event.head_commit.message }}"
+
+            🔗 Report (if deployed): https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+            📸 Screenshot attached (if generated successfully).
+
+            Regards,  
+            GitHub CI Bot
+          attachments: ./html-report/report-screenshot.png
+
+
+
+
+
+

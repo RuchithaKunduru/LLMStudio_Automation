@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --require-module ts-node/register --require test/steps/**/*.ts --format json:test/test-results/report.json",
-    "report": "ts-node test/utils/reporter.ts",
+    "report": "ts-node utils/reporter.ts",
     "test:run": "npm run test && npm run report"
   },
   "keywords": [],
