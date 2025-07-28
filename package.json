@@ -1,0 +1,23 @@
+{
+  "name": "playwright-cucumber-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require test/steps/**/*.ts --format json:test/test-results/report.json",
+    "report": "ts-node test/utils/reporter.ts",
+    "test:run": "npm run test && npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.13",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

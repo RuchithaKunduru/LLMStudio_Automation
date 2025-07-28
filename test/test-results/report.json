@@ -1,0 +1,158 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create,-search-and-delete-the-assistant;search-and-delete-an-assistant",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Search and delete an Assistant",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1177411099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5787720699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103848700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95209199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5004577999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25059699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "the user searches for the newly created assistant",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:282"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 7469699,
+              "error_message": "page.fill: value: expected string, got undefined\n    at LoginPage.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:205:21)\n    at C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:8:71\n    at __awaiter (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:4:12)\n    at LoginPage.searchAssistant (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:250:16)\n    at CustomWorld.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:284:19)\n    at C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:8:71\n    at __awaiter (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:4:12)\n    at CustomWorld.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:289:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the assistant should appear in the search result",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:287"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "the user deletes the assistant",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:293"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "the assistant should no longer be present",
+            "match": {
+              "location": "test\\steps\\LLM.steps.ts:298"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 368977299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create,-search-and-delete-the-assistant",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create, search and Delete the Assistant",
+    "tags": [],
+    "uri": "test\\features\\NewAssistant.feature"
+  }
+]
