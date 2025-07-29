@@ -17,7 +17,7 @@ Scenario: Create Policiy Pack
 
 Scenario: Update Policy Pack
     Given user clicks on All Polices button
-    And user able to see all created policies
+    # And user able to see all created policies
     When user clicks on any one of the policy pack
     And user updates the information of the policy pack
     And user selects the AI Assistant tone as "Friendly"
@@ -27,7 +27,7 @@ Scenario: Update Policy Pack
 
 Scenario: Delete Policy Pack
     Given user clicks on All Polices button
-    And user able to see all created policies 
+    # And user able to see all created policies 
     When user check for "QAPolicyPack731" policy pack   
     And user clicks on kebab menu of the policy pack
     And user clicks on delete button

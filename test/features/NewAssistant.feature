@@ -30,9 +30,19 @@ Scenario: List of Assistants
 
 Scenario: Search and delete an Assistant  
     Given user should land on the dashboard
-    And the user searches for the newly created assistant
-    Then the assistant should appear in the search result
-    When the user deletes the assistant
-    Then the assistant should no longer be present
+    When user searches for the assistant
+    And user clicks on the options menu for the assistant
+    And user deletes the assistant
+    And user clicks on confirm delete button
+    Then the assistant should no longer be visible in the list
+
+Scenario: Archieve an existing Assistant  
+    Given user should land on the dashboard
+    When user searches for any existing assistant "QAAssistant1"
+    And user clicks on the options menu for the assistant
+    And user archieves the assistant
+    And user clicks on confirm archieve button
+    Then the assistant should be archived successfully
+    
 
 
