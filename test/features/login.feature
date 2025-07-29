@@ -4,7 +4,7 @@ Feature: Login Feature
     Given user am on the login page
     When user login with valid credentials
     When user click on signIn button
-    And user should land on the dashboard
+    Then user should land on the dashboard
 
   Scenario: InValid Login
     Given user am on the login page

@@ -4,6 +4,607 @@
     "elements": [
       {
         "description": "",
+        "id": "login-feature;valid-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Valid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1104223399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5097756999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113142700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73941300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4486623600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 378330300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;invalid-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "InValid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 948090099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5035820099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "user login with Invalid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77046100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73170600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "user should be able to see the error message",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1917128999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 315216300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;empty-fields-validation",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Empty Fields Validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 935246200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4678343899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "user login with empty credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83928900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80548999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "user should be able to see the warning message",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13159199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 251332600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Feature",
+    "tags": [],
+    "uri": "test\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create,-search-and-delete-the-assistant;user-creates-a-new-assistant-with-valid-details",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "User creates a new assistant with valid details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1020009100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4937983700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88991099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80656900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4473760799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user clicks on \"+ Create New Assistant\" button",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210052900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "provides the assistant name \"QAAssistant\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 868890900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "selects the assistant type as \"Normal\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21094299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "clicks on vector database as \"AlloyDB\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57945299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "provides the description \"This is used for testing.\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22457399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "user clicks on the \"Create\" button",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5105305500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the message is displayed, I click the No button",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7045464999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should be able to see the AI Assistant name",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 650699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 407771300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create,-search-and-delete-the-assistant;list-of-assistants",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "List of Assistants",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1026070499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4662093499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75802799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77997100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4572830499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22867899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "user clicks the list of assistants",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67190900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "user selects the \"Published Assistant\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98541700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "user should be able to see the list of filtering assistants",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "user clicks the list of assistants",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65580100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "user selects the Archived Assistant",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91748800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "user should be able to see the list of filtering assistants",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 439400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 347455300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "create,-search-and-delete-the-assistant;search-and-delete-an-assistant",
         "keyword": "Scenario",
         "line": 31,
@@ -14,7 +615,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1177411099
+              "duration": 926181199
             }
           },
           {
@@ -23,11 +624,11 @@
             "line": 4,
             "name": "user am on the login page",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:9"
+              "location": "test\\steps\\login.steps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5787720699
+              "duration": 4308457800
             }
           },
           {
@@ -36,11 +637,11 @@
             "line": 5,
             "name": "user login with valid credentials",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:18"
+              "location": "test\\steps\\login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 103848700
+              "duration": 85065600
             }
           },
           {
@@ -49,11 +650,11 @@
             "line": 6,
             "name": "user click on signIn button",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:30"
+              "location": "test\\steps\\login.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 95209199
+              "duration": 64368300
             }
           },
           {
@@ -62,11 +663,11 @@
             "line": 7,
             "name": "user should land on the dashboard",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:35"
+              "location": "test\\steps\\login.steps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 5004577999
+              "duration": 4976269599
             }
           },
           {
@@ -75,47 +676,217 @@
             "line": 32,
             "name": "user should land on the dashboard",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:35"
+              "location": "test\\steps\\login.steps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 25059699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 33,
-            "name": "the user searches for the newly created assistant",
-            "match": {
-              "location": "test\\steps\\LLM.steps.ts:282"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 7469699,
-              "error_message": "page.fill: value: expected string, got undefined\n    at LoginPage.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:205:21)\n    at C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:8:71\n    at __awaiter (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:4:12)\n    at LoginPage.searchAssistant (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\pages\\LLMPage.ts:250:16)\n    at CustomWorld.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:284:19)\n    at C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:8:71\n    at __awaiter (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:4:12)\n    at CustomWorld.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\test\\steps\\LLM.steps.ts:289:12)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 34,
-            "name": "the assistant should appear in the search result",
-            "match": {
-              "location": "test\\steps\\LLM.steps.ts:287"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "duration": 18776500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 35,
-            "name": "the user deletes the assistant",
+            "line": 33,
+            "name": "user searches for the assistant",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:293"
+              "location": "test\\steps\\newAssitant.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1036560899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "user clicks on the options menu for the assistant",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6590697100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "user deletes the assistant",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89490900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "user clicks on confirm delete button",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86097600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the assistant should no longer be visible in the list",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1068199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 354481999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create,-search-and-delete-the-assistant;archieve-an-existing-assistant",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Archieve an existing Assistant",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1019908900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4260366299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78530499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69707200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4428616500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17056900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user searches for any existing assistant \"QAAssistant1\"",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6032013399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "user clicks on the options menu for the assistant",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:81"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30004439800,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\SaiRuchithaKunduru\\playwright-cucumber-LLMStudio\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "user archieves the assistant",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:107"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "user clicks on confirm archieve button",
+            "match": {
+              "location": "test\\steps\\newAssitant.steps.ts:112"
             },
             "result": {
               "status": "skipped",
@@ -125,10 +896,10 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 36,
-            "name": "the assistant should no longer be present",
+            "line": 45,
+            "name": "the assistant should be archived successfully",
             "match": {
-              "location": "test\\steps\\LLM.steps.ts:298"
+              "location": "test\\steps\\newAssitant.steps.ts:117"
             },
             "result": {
               "status": "skipped",
@@ -140,7 +911,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 368977299
+              "duration": 305075799
             }
           }
         ],
@@ -153,6 +924,737 @@
     "keyword": "Feature",
     "name": "Create, search and Delete the Assistant",
     "tags": [],
-    "uri": "test\\features\\NewAssistant.feature"
+    "uri": "test\\features\\newAssistant.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "policy-pack-create,-update-and-delete;create-policiy-pack",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Create Policiy Pack",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1077429000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4012103800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81248399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76454000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2933055699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "user able to see All policies section",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1135299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "user clicks on All Polices button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106628599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user clicks on Create New Policy button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 943573399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user provides policy name \"QAPolicyPack\"",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22018000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "selects the policy type as \"Normal\"",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27734299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "user enters the description \"This policy pack is for QA Testing\"",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30581500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "user clicks on create policy pack button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48989000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 305557299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "policy-pack-create,-update-and-delete;update-policy-pack",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Update Policy Pack",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 973226999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3595556899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87232199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76234199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5481208600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "user clicks on All Polices button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78910699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "user clicks on any one of the policy pack",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12838890200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "user updates the information of the policy pack",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157548199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "user selects the AI Assistant tone as \"Friendly\"",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1471250899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "user enables the toggle button of the file upload",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29186099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "user clicks on update policy pack button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 341045099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "user should be able to see the updated toast message",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 412199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 322509799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "policy-pack-create,-update-and-delete;delete-policy-pack",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Delete Policy Pack",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1124926600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4989436199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90644299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85023100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4442351200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "user clicks on All Polices button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61131399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "user check for \"QAPolicyPack731\" policy pack",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 671499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "user clicks on kebab menu of the policy pack",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11832391399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "user clicks on delete button",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68648600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "user should be able to see the deleted toast message",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1152600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 344273699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "policy-pack-create,-update-and-delete;instant-learning-section",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Instant Learning section",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1179924999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4488003700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80166299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77379700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2890072599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14871000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "user clicks on Instant learning section",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 280696300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "user should be able to see instant learning dashboard",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 480400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 386605800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "policy-pack-create,-update-and-delete;all-utility-agents-section",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "All Utility Agents section",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 951352799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user am on the login page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3490151099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user login with valid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89966099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79098499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2923273500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "user should land on the dashboard",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16849499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "user clicks on all utility agents section",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 213987600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "user should be able to see all the agents",
+            "match": {
+              "location": "test\\steps\\policyPack.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 688000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 430323299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "policy-pack-create,-update-and-delete",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Policy Pack Create, Update and delete",
+    "tags": [],
+    "uri": "test\\features\\policyPack.feature"
   }
 ]

@@ -56,9 +56,20 @@ export const locators = {
   archievedAssistant:'//div[text()="Archived Assistant"]',
   listOfFilteringAssistants: '//div[contains(@class,"MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row")]',
 
-  // Search and Delete Assistant
-  searchInput: 'input[placeholder="Search Your Assistant"]',
-  deleteButton: 'button:has-text("Delete")',
-  confirmDeleteButton: 'button:has-text("Confirm")'
+  // Search Assistant
+  searchInput: '(//div/input[@placeholder="Search Your Assistant"])[1]',
+  kebabMenu:"//img[contains(@class, 'kebab_class')]",
+
+  //Delete Assistant
+  deleteButton: '//div[text()="Delete"]',
+  confirmDeleteButton: '//button[text()="Delete"]',
+  deleteMessage: '[text="Assistant deleted successfully"]',
+
+  // Archive Assistant
+  archiveButton: '//div[text()="Archive"]', 
+  confirmArchiveButton: '//button[text()="Archive"]',
+  archiveMessage: '[text="Assistant archived successfully"]',
+
+
   
 };
