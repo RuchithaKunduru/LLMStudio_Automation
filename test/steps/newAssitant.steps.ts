@@ -1,6 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { AssistantPage } from "../pages/newAssistantPage";
-import { expect } from '@playwright/test';
 import { generateRandomName } from "../../utils/generteRandomName";
 
 let assistant: string;
@@ -14,8 +13,8 @@ When("provides the assistant name {string}", async function (name: string) {
   const assistantPage = new AssistantPage(this.page!);
   const randomName = generateRandomName(name);
   this.assistantName = randomName;
-  assistant = randomName; 
-  console.log("Generated Assistant Name:", randomName); 
+  assistant = randomName;
+  console.log("Generated Assistant Name:", randomName);
   await assistantPage.verifyAssistantName(randomName);
 });
 
@@ -34,10 +33,10 @@ When("provides the description {string}", async function (desc: string) {
   await assistantPage.verifyDescription(desc);
 });
 
-When("user clicks on the {string} button", async function (string) {
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.clickCreateButton();
-});
+// When("user clicks on the {string} button", async function (string) {
+//   const assistantPage = new AssistantPage(this.page!);
+//   await assistantPage.clickCreateButton();
+// });
 
 When("the message is displayed, I click the No button", async function () {
   await this.page.waitForTimeout(3000);
@@ -73,48 +72,64 @@ When("user selects the Archived Assistant", async function () {
   await assistantPage.clickArchievedAssistant();
 });
 
-When('user searches for the assistant', async function () {
+When("user searches for the assistant", async function () {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.searchAssistant(assistant);
 });
 
-When('user clicks on the options menu for the assistant', async function () {
+When("user clicks on the options menu for the assistant", async function () {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.optionsMenuForAssistant();
 });
 
-When('user deletes the assistant', async function () {
+When("user deletes the assistant", async function () {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.clickDeleteButton();
 });
 
-When('user clicks on confirm delete button', async function () {
-  const assistantPage = new AssistantPage(this.page!);    
+When("user clicks on confirm delete button", async function () {
+  const assistantPage = new AssistantPage(this.page!);
   await assistantPage.clickConfirmDeleteButton();
 });
 
-Then('the assistant should no longer be visible in the list', async function () {
+Then(
+  "the assistant should be deleted successfully",
+  async function () {
+    const assistantPage = new AssistantPage(this.page!);
+    await assistantPage.verifyDeleteMessage();
+  }
+);
+
+When(
+  "user searches for any existing assistant {string}",
+  async function (eaName: string) {
+    await this.page.waitForTimeout(5000);
+    const assistantPage = new AssistantPage(this.page!);
+    await assistantPage.searchExistingAssistant(eaName);
+  }
+);
+
+When("user clicks on the {string} assistant", async function (archieve:string) {
   const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.verifyDeleteMessage();
+  await assistantPage.clickArchiveButton(archieve);
 });
 
-When('user searches for any existing assistant {string}', async function(eaName: string) {
-  await this.page.waitForTimeout(5000);
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.searchExistingAssistant(eaName);
-});
-
-When('user archieves the assistant', async function () {
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.clickArchiveButton();
-});
-
-When('user clicks on confirm archieve button', async function () {
+When("user clicks on confirm archieve button", async function () {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.clickConfirmArchiveButton();
 });
 
-Then('the assistant should be archived successfully', async function () {
+When("user clicks on the options menu for the unarchieve assistant", async function () {
+  const assistantPage = new AssistantPage(this.page!);
+  await assistantPage.optionsMenuForUnArchiveAssistant();
+});
+
+Then("the assistant should be archived successfully", async function () {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.verifyArchiveMessage();
+});
+
+Then("the assistant should be unarchived successfully", async function () {
+  const assistantPage = new AssistantPage(this.page!);
+  await assistantPage.verifyUnArchiveMessage();
 });
