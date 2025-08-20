@@ -43,11 +43,6 @@ When("user enters the description {string}", async function (pDesc: string) {
   await policyPage.verifyPolicyDescription(pDesc);
 });
 
-When("user clicks on create policy pack button", async function () {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.clickCreatePolicyPack();
-});
-
 Given("user able to see all created policies", async function () {
   const policyPage = new PolicyPackPage(this.page!);
   await policyPage.verifyCreatedPolicies();
@@ -74,11 +69,6 @@ When(
 When("user enables the toggle button of the file upload", async function () {
   const policyPage = new PolicyPackPage(this.page!);
   await policyPage.enableFileUploadButton();
-});
-
-When("user clicks on update policy pack button", async function () {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.clickUpdatePolicyPackButton();
 });
 
 Then("user should be able to see the updated toast message", async function () {

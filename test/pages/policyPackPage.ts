@@ -33,10 +33,6 @@ export class PolicyPackPage {
     await input.fill(pDesc);
   }
 
-  async clickCreatePolicyPack(){
-    await this.page.click(policyPackLocators.policyPackButton);
-  }
-
   async verifyCreatedPolicies(){
     // await this.page.waitForLoadState('networkidle'); 
     await this.page.waitForSelector(policyPackLocators.createdPolices, { timeout: 10000 });
@@ -61,10 +57,6 @@ export class PolicyPackPage {
 
   async enableFileUploadButton(){
     await this.page.check(policyPackLocators.enableFileUpload);
-  }
-
-  async clickUpdatePolicyPackButton(){
-    await this.page.click(policyPackLocators.updatePolicyPackButton);
   }
 
   async verifyPolicyToastMessage(){

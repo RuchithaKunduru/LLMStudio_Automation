@@ -16,8 +16,8 @@ export class LoginPage {
     console.log('Credentials filled.');
   }
 
-  async clickSignIn(loginButton: string) {
-    await this.page.click(loginLocators.signInButton(loginButton));
+  async clickButtonText(loginButton: string) {
+    await this.page.click(loginLocators.ButtonText(loginButton));
   }
 
   async verifyDashboard() {

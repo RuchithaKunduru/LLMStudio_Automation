@@ -6,14 +6,14 @@ Background:
     When user click on "Sign In" button
     Then user should land on the dashboard
 
-Scenario: Create Policiy Pack
+Scenario: Create Policy Pack
     Given user able to see All policies section
     And user clicks on All Polices button
     And user clicks on Create New Policy button
     And user provides policy name "QAPolicyPack"
     And selects the policy type as "Normal"
     And user enters the description "This policy pack is for QA Testing"
-    And user clicks on create policy pack button
+    And user click on "Create Policy Pack" button
 
 Scenario: Update Policy Pack
     Given user clicks on All Polices button
@@ -21,7 +21,7 @@ Scenario: Update Policy Pack
     And user updates the information of the policy pack
     And user selects the AI Assistant tone as "Friendly"
     And user enables the toggle button of the file upload
-    And user clicks on update policy pack button
+    And user clicks on "Update Policy Pack" button
     Then user should be able to see the updated toast message
 
 Scenario: Delete Policy Pack

@@ -2,7 +2,7 @@ export const loginLocators = {
   //login locators
   usernameInput: '//input[@type="text"]',
   passwordInput: '//input[@type="password"]',
-  signInButton: (loginButton:string)=> `//button[text()="${loginButton}"]`,
+  ButtonText: (loginButton:string)=> `//button[text()="${loginButton}"]`,
   dashboardSection: '//div[text()="eLLM Studio"]',
   invalidCreds: '//div/p[contains(text(), "Invalid credentials")]',
   emptyCreds:'//div/p[contains(text(), "Please enter your username")]',
