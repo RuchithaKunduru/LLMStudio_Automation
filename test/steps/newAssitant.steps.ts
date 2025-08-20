@@ -33,11 +33,6 @@ When("provides the description {string}", async function (desc: string) {
   await assistantPage.verifyDescription(desc);
 });
 
-// When("user clicks on the {string} button", async function (string) {
-//   const assistantPage = new AssistantPage(this.page!);
-//   await assistantPage.clickCreateButton();
-// });
-
 When("the message is displayed, I click the No button", async function () {
   await this.page.waitForTimeout(3000);
   const assistantPage = new AssistantPage(this.page!);
@@ -82,16 +77,6 @@ When("user clicks on the options menu for the assistant", async function () {
   await assistantPage.optionsMenuForAssistant();
 });
 
-When("user deletes the assistant", async function () {
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.clickDeleteButton();
-});
-
-When("user clicks on confirm delete button", async function () {
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.clickConfirmDeleteButton();
-});
-
 Then(
   "the assistant should be deleted successfully",
   async function () {
@@ -112,11 +97,6 @@ When(
 When("user clicks on the {string} assistant", async function (archieve:string) {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.clickArchiveButton(archieve);
-});
-
-When("user clicks on confirm archieve button", async function () {
-  const assistantPage = new AssistantPage(this.page!);
-  await assistantPage.clickConfirmArchiveButton();
 });
 
 When("user clicks on the options menu for the unarchieve assistant", async function () {

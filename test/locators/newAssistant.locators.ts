@@ -23,13 +23,10 @@ export const newAssistantLocators = {
   kebabMenu:"//img[contains(@class, 'kebab_class')]",
 
   //Delete Assistant
-  deleteButton: '//div[text()="Delete"]',
-  confirmDeleteButton: '//button[text()="Delete"]',
   deleteMessage: '[text="Assistant deleted successfully"]',
 
   // Archive Assistant
   archiveButton: (archieve:string) => `//div[text()="${archieve}"]`, 
-  confirmArchiveButton: '//button[text()="Archive"]',
   archiveMessage: '[text="Assistant archived successfully"]',
   unArchiveMessage:'[text="Assistant unArchived successfully"]',
   unArchivekebabMenu: "(//img[contains(@class, 'kebab_class')])[1]"

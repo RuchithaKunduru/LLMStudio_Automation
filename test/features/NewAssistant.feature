@@ -8,7 +8,7 @@ Background:
     And user should land on the dashboard
 
 Scenario: User creates a new assistant with valid details
-    When user clicks on "+ Create New Assistant" button
+    When user click on "+ Create New Assistant" button
     And provides the assistant name "QAAssistant"
     And selects the assistant type as "Normal"
     And clicks on vector database as "AlloyDB"

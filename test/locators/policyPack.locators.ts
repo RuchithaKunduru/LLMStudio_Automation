@@ -7,7 +7,6 @@ export const policyPackLocators = {
   policyName: '//input[@placeholder="Enter policy name"]',
   policyType: '#assistant_type',
   policyDescription: '//input[@placeholder="Enter policy description"]',
-  policyPackButton: '//button[text()="Create Policy Pack"]',
 
   // Update Policy Pack
   createdPolices: "//div[contains(@class, 'grid-cols')]",
@@ -15,7 +14,6 @@ export const policyPackLocators = {
   infoOfPolicy:'//div/p[text()="Policy Pack Information"]',
   aiAssistantTone:'#demo-multiple-chip',
   enableFileUpload: "(//div[contains(., 'File Upload')]//input[@type='checkbox'])[2]",
-  updatePolicyPackButton:'//button[text()="Update Policy Pack"]',
   UpdateToastMessage:'[text="Policy updated successfully"]',
 
   // Delete Policy Pack

@@ -78,16 +78,6 @@ export class AssistantPage {
     await kebabMenu.click();
   }
 
-  async clickDeleteButton() {
-    const deleteButton = this.page.locator(newAssistantLocators.deleteButton);
-    await deleteButton.click();
-  }
-  
-  async clickConfirmDeleteButton() {
-    const confirmButton = this.page.locator(newAssistantLocators.confirmDeleteButton);
-    await confirmButton.click();
-  }
-
   async verifyDeleteMessage(){
     await this.page.locator(newAssistantLocators.deleteMessage).isVisible;
   }
@@ -101,11 +91,6 @@ export class AssistantPage {
   async clickArchiveButton(archieve: string) {
     const archiveButton = this.page.locator(newAssistantLocators.archiveButton(archieve));
     await archiveButton.click();
-  }
-
-  async clickConfirmArchiveButton() {
-    const confirmButton = this.page.locator(newAssistantLocators.confirmArchiveButton);
-    await confirmButton.click();
   }
 
   async optionsMenuForUnArchiveAssistant(){
