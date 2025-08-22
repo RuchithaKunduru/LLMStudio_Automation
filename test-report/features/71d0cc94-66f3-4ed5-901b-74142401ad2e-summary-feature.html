@@ -849,15 +849,15 @@ body.darkmode .navbar-text {
                 
             </div>
             <h1>Feature:
-                <small>Create, search and Delete the Assistant</small>
+                <small>Summary Feature</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    NewAssistant.feature
+                    summary.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    features/NewAssistant.feature</p>
+                    features/summary.feature</p>
             
         </div>
 
@@ -893,7 +893,7 @@ body.darkmode .navbar-text {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">1</div>
+                <div class="total">2</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -1044,7 +1044,7 @@ body.darkmode .navbar-text {
                     
                 </div>
 
-                <h2>Scenario: <small>User creates and verifies an Assistant</small></h2>
+                <h2>Scenario: <small>Edit Assistant name and add avtar to Summary page</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1057,7 +1057,7 @@ body.darkmode .navbar-text {
 
                     
                         <li>
-                            <span class="step skipped-background" data-bs-toggle="tooltip" title="Scenario is skipped">39</span>
+                            <span class="step skipped-background" data-bs-toggle="tooltip" title="Scenario is skipped">29</span>
                         </li>
                     
 
@@ -1069,6 +1069,10 @@ body.darkmode .navbar-text {
 
                     
 
+                    
+                        <li>
+                            <span class="step not-defined-background" data-bs-toggle="tooltip" title="Scenario has nop step implementation.">3</span>
+                        </li>
                     
 
                     
@@ -1353,7 +1357,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        user click on "+ Create New Assistant" button
+                                        user clicks on "+ Create New Assistant" button
                                         
                                     
 
@@ -1417,7 +1421,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        provides the assistant name "QAAssistant"
+                                        provides the assistant name "QARagini"
                                         
                                     
 
@@ -1481,7 +1485,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        selects the assistant type as "Normal"
+                                        selects the assistant type as "Ecommerce"
                                         
                                     
 
@@ -1609,7 +1613,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        provides the description "This is used for testing."
+                                        provides the description "For testing"
                                         
                                     
 
@@ -1727,6 +1731,162 @@ body.darkmode .navbar-text {
 
                                 
                                     
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        the message is displayed, I click the No button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+When (/^the message is displayed, I click the No button$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+When (/^the message is displayed, I click the No button$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        I should be able to see the AI Assistant name
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+Then (/^I should be able to see the AI Assistant name$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+Then (/^I should be able to see the AI Assistant name$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
                                         <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
                                             <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
@@ -1737,7 +1897,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        the message is displayed, user click the No button
+                                        user clicks on Summary button
                                         
                                     
 
@@ -1801,7 +1961,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        user should be able to see the AI Assistant name
+                                        user should see project title, assistant tone, assistant type
                                         
                                     
 
@@ -1862,10 +2022,792 @@ body.darkmode .navbar-text {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Given </span>
+                                    <span class="keyword highlight">When </span>
 
                                     
-                                        user go back to the main dashboard
+                                        user clicks on Project Title edit button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see Project title edit page header, add avtar icon
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user clicks on add avtar icon
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see avtar list
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user selects an avtar
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see "Change picture" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user edits Assistant name
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user click on "Save Prompt Settings" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see successful popup
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user click on "Cancel" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        I should be able to see the AI Assistant name
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+Then (/^I should be able to see the AI Assistant name$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+Then (/^I should be able to see the AI Assistant name$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user navigates back
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user clicks on "Create a highly intelligent" icon
                                         
                                     
 
@@ -2235,6 +3177,65 @@ body.darkmode .navbar-text {
                     
                 
                         
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Enable toggle buttons and craft AI's expertise to Summary page</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step skipped-background" data-bs-toggle="tooltip" title="Scenario is skipped">27</span>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <span class="step failed-background" data-bs-toggle="tooltip" title="Scenario failed">2</span>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step not-defined-background" data-bs-toggle="tooltip" title="Scenario has nop step implementation.">3</span>
+                        </li>
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
                             <div class="scenario-step-container">
 
                                 
@@ -2247,6 +3248,198 @@ body.darkmode .navbar-text {
 
                                 <div class="text">
                                     <span class="keyword highlight">Given </span>
+
+                                    
+                                        user is on the login page
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user login with valid credentials
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user click on "Sign In" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
 
                                     
                                         user should land on the dashboard
@@ -2313,7 +3506,1393 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        user searches for any existing assistant "qaassistant1"
+                                        user clicks on "+ Create New Assistant" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        provides the assistant name "QARagini"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        selects the assistant type as "Ecommerce"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        clicks on vector database as "AlloyDB"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        provides the description "For testing"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user click on "Create" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        the message is displayed, I click the No button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+When (/^the message is displayed, I click the No button$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+When (/^the message is displayed, I click the No button$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        I should be able to see the AI Assistant name
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+Then (/^I should be able to see the AI Assistant name$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+Then (/^I should be able to see the AI Assistant name$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user clicks on Summary button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see project title, assistant tone, assistant type
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user clicks on Project Title edit button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user disable the "Co-Pilot" and "Model Selection" toggle
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see that "Co-Pilot" and "Model Selection" toggles are unchecked
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user clicks on craft your AI's expertise input field and gives input
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user hits enter
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user click on "Save Prompt Settings" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should see successful popup
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user click on "Cancel" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        I should be able to see the AI Assistant name
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+Then (/^I should be able to see the AI Assistant name$/, (callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+Then (/^I should be able to see the AI Assistant name$/, () => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user navigates back
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user clicks on "Create a highly intelligent" icon
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user searches for the assistant
                                         
                                     
 
@@ -2441,7 +5020,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        user clicks on the "Archive" assistant
+                                        user clicks on the "Delete" assistant
                                         
                                     
 
@@ -2505,7 +5084,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        user click on "Archive" button
+                                        user click on "Delete" button
                                         
                                     
 
@@ -2569,967 +5148,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        the assistant should be archived successfully
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Given </span>
-
-                                    
-                                        user clicks the list of assistants
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user selects the "Archived Assistant"
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user searches for any existing assistant "qaassistant1"
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user clicks on search assistant
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user clicks on the options menu for the unarchieve assistant
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user clicks on the "Unarchive" assistant
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user click on "Unarchive" button
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        the assistant should be unarchived successfully
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Given </span>
-
-                                    
-                                        user should land on the dashboard
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user clicks the list of assistants
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user selects the "Published Assistant"
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        user should be able to see the list of filtering assistants
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user clicks the list of assistants
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        user selects the "Archived Assistant"
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        user should be able to see the list of filtering assistants
+                                        the assistant should be deleted successfully
                                         
                                     
 
@@ -3643,7 +5262,7 @@ body.darkmode .navbar-text {
                     datasets: [{
                         data: [
                             0,
-                            1,
+                            2,
                             0,
                             0,
                             0,
