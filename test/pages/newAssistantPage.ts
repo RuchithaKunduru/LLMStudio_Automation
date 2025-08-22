@@ -45,25 +45,23 @@ export class AssistantPage {
   async verifyAIAssistantName(){
     await this.page.locator(newAssistantLocators.aiAssistantName);
   }
+
+  async clickLLMStudioImage(){
+    await this.page.click(newAssistantLocators.llmStudioImage);
+  }
   
   async clickListOfAssistants(){
     await this.page.click(newAssistantLocators.listOfAssistants);
   }
 
-  async clickPublishedAssistant(aName: string){
-    const assistantOption = this.page.locator(newAssistantLocators.publishedAssitant);
+  async clickPublishedAssistant(assistant: string){
+    const assistantOption = this.page.locator(newAssistantLocators.publishedAssitant(assistant));
     await assistantOption.waitFor({ state: 'visible' });
     await assistantOption.click();
   }
 
   async verifyFilteringAssistants(){
     await this.page.locator(newAssistantLocators.listOfFilteringAssistants);
-  }
-  
-  async clickArchievedAssistant(){
-    const assistantOption = this.page.locator(newAssistantLocators.archievedAssistant);
-    await assistantOption.waitFor({ state: 'visible' });
-    await assistantOption.click();
   }
 
   async searchAssistant(assistantName: string) {
@@ -86,6 +84,12 @@ export class AssistantPage {
     const searchInput = this.page.locator(newAssistantLocators.searchInput);
     await searchInput.fill(eaName);
     await this.page.waitForTimeout(1000);
+  }
+
+  async clickSearchAssistant(){
+    await this.page.waitForTimeout(2000);
+    await this.page.click(newAssistantLocators.searchButton);
+    await this.page.keyboard.press('Enter');
   }
 
   async clickArchiveButton(archieve: string) {

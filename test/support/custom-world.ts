@@ -11,7 +11,7 @@ export class CustomWorld extends World {
   }
 
   async initBrowser() {
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch ({  args: ['--window-size=800,500'], headless: false });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
   }
