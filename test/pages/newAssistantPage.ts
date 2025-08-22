@@ -45,25 +45,23 @@ export class AssistantPage {
   async verifyAIAssistantName(){
     await this.page.locator(newAssistantLocators.aiAssistantName);
   }
+
+  async clickLLMStudioImage(){
+    await this.page.click(newAssistantLocators.llmStudioImage);
+  }
   
   async clickListOfAssistants(){
     await this.page.click(newAssistantLocators.listOfAssistants);
   }
 
-  async clickPublishedAssistant(aName: string){
-    const assistantOption = this.page.locator(newAssistantLocators.publishedAssitant);
+  async clickPublishedAssistant(assistant: string){
+    const assistantOption = this.page.locator(newAssistantLocators.publishedAssitant(assistant));
     await assistantOption.waitFor({ state: 'visible' });
     await assistantOption.click();
   }
 
   async verifyFilteringAssistants(){
     await this.page.locator(newAssistantLocators.listOfFilteringAssistants);
-  }
-  
-  async clickArchievedAssistant(){
-    const assistantOption = this.page.locator(newAssistantLocators.archievedAssistant);
-    await assistantOption.waitFor({ state: 'visible' });
-    await assistantOption.click();
   }
 
   async searchAssistant(assistantName: string) {
@@ -78,16 +76,6 @@ export class AssistantPage {
     await kebabMenu.click();
   }
 
-  async clickDeleteButton() {
-    const deleteButton = this.page.locator(newAssistantLocators.deleteButton);
-    await deleteButton.click();
-  }
-  
-  async clickConfirmDeleteButton() {
-    const confirmButton = this.page.locator(newAssistantLocators.confirmDeleteButton);
-    await confirmButton.click();
-  }
-
   async verifyDeleteMessage(){
     await this.page.locator(newAssistantLocators.deleteMessage).isVisible;
   }
@@ -98,14 +86,15 @@ export class AssistantPage {
     await this.page.waitForTimeout(1000);
   }
 
+  async clickSearchAssistant(){
+    await this.page.waitForTimeout(2000);
+    await this.page.click(newAssistantLocators.searchButton);
+    await this.page.keyboard.press('Enter');
+  }
+
   async clickArchiveButton(archieve: string) {
     const archiveButton = this.page.locator(newAssistantLocators.archiveButton(archieve));
     await archiveButton.click();
-  }
-
-  async clickConfirmArchiveButton() {
-    const confirmButton = this.page.locator(newAssistantLocators.confirmArchiveButton);
-    await confirmButton.click();
   }
 
   async optionsMenuForUnArchiveAssistant(){

@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { PolicyPackPage } from "../pages/policyPackPage";
 import { generateRandomPolicyName } from "../../utils/generateRandomPolicyName";
+import { savePolicyName, getPolicyName} from '../support/policyStore';
 
 Given("user able to see All policies section", async function () {
   const policyPage = new PolicyPackPage(this.page!);
@@ -12,11 +13,6 @@ When("user clicks on All Polices button", async function () {
   await policyPage.clickAllPoliciesButton();
 });
 
-// When('user clicks on {string} button', async function (){
-//   const policyPage = new PolicyPackPage(this.page!);
-//   await policyPage.clickAnyPolicy();
-// });
-
 When("user clicks on Create New Policy button", async function () {
   const policyPage = new PolicyPackPage(this.page!);
   await policyPage.clickCreateNewPolicyButton();
@@ -27,9 +23,10 @@ When(
   { timeout: 30000 },
   async function (pName: string) {
     const policyPage = new PolicyPackPage(this.page!);
-    const generatedPolicyName = generateRandomPolicyName();
-    this.policyName = generatedPolicyName;
-    await policyPage.verifyPolicyName(generatedPolicyName);
+    const generatedPolicyName = generateRandomPolicyName(pName); // e.g., "QAPolicyPack123"
+    this.policyName = generatedPolicyName;     // available in THIS scenario
+    savePolicyName(generatedPolicyName);       // persists for NEXT scenarios
+    await policyPage.typePolicyName(generatedPolicyName);
   }
 );
 
@@ -43,19 +40,16 @@ When("user enters the description {string}", async function (pDesc: string) {
   await policyPage.verifyPolicyDescription(pDesc);
 });
 
-When("user clicks on create policy pack button", async function () {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.clickCreatePolicyPack();
-});
-
 Given("user able to see all created policies", async function () {
   const policyPage = new PolicyPackPage(this.page!);
   await policyPage.verifyCreatedPolicies();
 });
 
-When("user clicks on any one of the policy pack", async function () {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.clickAnyOnePolicyPack();
+When("user clicks on the created policy pack",{ timeout: 100000 }, async function () {
+   if (!this.policyName) throw new Error("No policy pack name stored");
+
+    const policyPage = new PolicyPackPage(this.page!);
+    await policyPage.clickPolicyPack(this.policyName);
 });
 
 When("user updates the information of the policy pack", async function () {
@@ -76,29 +70,26 @@ When("user enables the toggle button of the file upload", async function () {
   await policyPage.enableFileUploadButton();
 });
 
-When("user clicks on update policy pack button", async function () {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.clickUpdatePolicyPackButton();
-});
-
 Then("user should be able to see the updated toast message", async function () {
   const policyPage = new PolicyPackPage(this.page!);
   await policyPage.verifyPolicyToastMessage();
 });
 
-When("user check for {string} policy pack", async function (pPack: string) {
-  const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.verifyPolicyPack(pPack);
+Given("user able to see the created policy pack", async function () {
+  const policyName = getPolicyName(); // retrieves the persisted policy name
+  if (!this.policyName) throw new Error("No policy pack name found in storage");
+    const policyPage = new PolicyPackPage(this.page!);
+    await policyPage.verifyCreatedPolicyPack(this.policyName);
 });
 
 When("user clicks on kebab menu of the policy pack", async function () {
   const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.verifyKebabMenu();
+  await policyPage.verifyKebabMenu(this.policyName);
 });
 
-When("user clicks on delete button", async function () {
+When("user clicks on delete button of the policy pack", async function () {
   const policyPage = new PolicyPackPage(this.page!);
-  await policyPage.verifyDeleteButton();
+  await policyPage.clickDeleteButton();
 });
 
 Then("user should be able to see the deleted toast message", async function () {

@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, expect} from '@playwright/test';
 import { policyPackLocators } from '../locators/policyPack.locators';
 
 export class PolicyPackPage {
@@ -18,8 +18,9 @@ export class PolicyPackPage {
     await this.page.click(policyPackLocators.createNewPolicyButton);
   }
 
-  async verifyPolicyName(pName: string){
-    await this.page.fill(policyPackLocators.policyName, pName);
+  async typePolicyName(pName: string){
+    // await this.page.fill(policyPackLocators.policyName, pName);
+    await this.page.getByRole('textbox', { name: /policy name/i }).fill(pName);
   }
 
   async verifyPolicyType(pType: string){
@@ -33,18 +34,16 @@ export class PolicyPackPage {
     await input.fill(pDesc);
   }
 
-  async clickCreatePolicyPack(){
-    await this.page.click(policyPackLocators.policyPackButton);
-  }
-
   async verifyCreatedPolicies(){
     // await this.page.waitForLoadState('networkidle'); 
     await this.page.waitForSelector(policyPackLocators.createdPolices, { timeout: 10000 });
 
   }
 
-  async clickAnyOnePolicyPack(){
-    await this.page.click(policyPackLocators.anyOnePolicy);
+  async clickPolicyPack(policyName: string) {
+    // const policyLocator = `//div[contains(@class, "policy-pack-name") and text()='${policyName}']`;
+    const policyLocator=`//span[text()='${policyName}']/ancestor::div[contains(@class, "assistant-name-card")]`
+    await this.page.click(policyLocator);
   }
 
   async updateInfoOfPolicyPack(){
@@ -61,26 +60,28 @@ export class PolicyPackPage {
 
   async enableFileUploadButton(){
     await this.page.check(policyPackLocators.enableFileUpload);
-  }
-
-  async clickUpdatePolicyPackButton(){
-    await this.page.click(policyPackLocators.updatePolicyPackButton);
+    await this.page.waitForTimeout(1000);
   }
 
   async verifyPolicyToastMessage(){
     await this.page.locator(policyPackLocators.UpdateToastMessage).isVisible;
+    await this.page.waitForTimeout(3000);
   }
 
-  async verifyPolicyPack(pPack: string){
-    await this.page.locator(policyPackLocators.policypack);
+  async verifyCreatedPolicyPack(policyName: string) {
+    // const policyLocator = `//div[contains(@class, "policy-pack-name") and text()='${policyName}']`;
+    const policyLocator=`//span[text()='${policyName}']/ancestor::div[contains(@class, "assistant-name-card")]`
+    await this.page.locator(policyLocator);
   }
 
-  async verifyKebabMenu(){
-    await this.page.click(policyPackLocators.policyKebabMenu);
+  async verifyKebabMenu(policyName: string) {
+    await this.page.click(policyPackLocators.policyKebabMenu(policyName));
   }
 
-  async verifyDeleteButton(){
-    await this.page.click(policyPackLocators.policyDeleteButton);
+  async clickDeleteButton(){
+    await this.page.waitForTimeout(2000);
+    await this.page.locator(policyPackLocators.policyDeleteButton).waitFor({ state: 'visible', timeout: 30000 });
+    await this.page.locator(policyPackLocators.policyDeleteButton).click();
   }
 
   async verifyDeleteToastMessage(){

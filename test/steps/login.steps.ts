@@ -26,7 +26,7 @@ When(
 
 When("user click on {string} button", async function (loginButton: string) {
   const loginPage = new LoginPage(this.page!);
-  await loginPage.clickSignIn(loginButton);
+  await loginPage.clickButtonText(loginButton);
 });
 
 Then("user should land on the dashboard", async function (this: CustomWorld) {
