@@ -11,16 +11,17 @@ export const newAssistantLocators = {
   createSubmitButton: '//button[text()="Create"]',
   noButton:'//button[contains(text(),"No")]',
   aiAssistantName: '//div[contains(text(),"AI Assistant Name")]', 
+  llmStudioImage: '//img[@alt="e LLM Studio"]',
 
   // Assistant filtering
   listOfAssistants:'//div[contains(@class,"relative text-[18px]")]',
-  publishedAssitant:'//div[text()="Published Assistant"]',
-  archievedAssistant:'//div[text()="Archived Assistant"]',
+  publishedAssitant:(assistant:string)=>`//div[text()="${assistant}"]`,
   listOfFilteringAssistants: '//div[contains(@class,"MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row")]',
 
   // Search Assistant
   searchInput: '(//div/input[@placeholder="Search Your Assistant"])[1]',
-  kebabMenu:"//img[contains(@class, 'kebab_class')]",
+  searchButton: '(//div/input[@placeholder="Search Your Assistant"])[1]',
+  kebabMenu:'(//div[contains(@class,"kebab_class")])[1]',
 
   //Delete Assistant
   deleteMessage: '[text="Assistant deleted successfully"]',
