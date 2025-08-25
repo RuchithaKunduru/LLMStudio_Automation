@@ -11,8 +11,8 @@ Background:
   And clicks on vector database as "AlloyDB"
   And provides the description "For testing"
   And user click on "Create" button 
-  When the message is displayed, I click the No button
-  Then I should be able to see the AI Assistant name
+  When the message is displayed, user click the No button
+  Then user should be able to see the AI Assistant name
 
 # Verify project details for Summary functionality
 
@@ -32,7 +32,7 @@ Scenario: Edit Assistant name and add avtar to Summary page
   When user click on "Save Prompt Settings" button
   Then user should see successful popup
   When user click on "Cancel" button 
-  Then I should be able to see the AI Assistant name
+  Then user should be able to see the AI Assistant name
   And user navigates back
   And user clicks on "Create a highly intelligent" icon
 
@@ -55,7 +55,7 @@ Scenario: Enable toggle buttons and craft AI's expertise to Summary page
   And user click on "Save Prompt Settings" button
   Then user should see successful popup
   When user click on "Cancel" button 
-  Then I should be able to see the AI Assistant name
+  Then user should be able to see the AI Assistant name
   And user navigates back
   And user clicks on "Create a highly intelligent" icon 
   
