@@ -14,10 +14,21 @@
   "type": "commonjs",
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
-    "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.13",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
     "multiple-cucumber-html-reporter": "^3.9.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  }
+    "typescript": "^5.9.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuchithaKunduru/LLMStudio_Automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RuchithaKunduru/LLMStudio_Automation/issues"
+  },
+  "homepage": "https://github.com/RuchithaKunduru/LLMStudio_Automation#readme"
 }
