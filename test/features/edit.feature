@@ -5,18 +5,17 @@ Background:
     When user click on "Sign In" button
     And user should land on the dashboard
 
-     When user searches for any existing assistant "anitaassistant"
+    When user searches for any existing assistant "anitaassistant"
     Then user should see details about assistant
 
-     When user clicks on assistant Project details
+    When user clicks on assistant Project details
     Then user should see assistant Project page
-
-     When user clicks on edit link
    
 
   Scenario: Verify Edit Section
 
    # Verify Project Details in Edit section
+    Given user clicks on the "Edit" section
     When user edit "Project Description" as "Functionality testing1 on LLM studio"
     When user click on "Save" button
     Then user should see success message
