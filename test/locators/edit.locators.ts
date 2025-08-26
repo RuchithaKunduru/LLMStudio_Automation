@@ -1,8 +1,6 @@
 import { verify } from "crypto";
 
 export const locators = {
-  
-
   search:'(//input[contains(@placeholder,"Search Your Assistant")])[1]',
   verifyAssistantProject:'//div[text()="Created on:"]',
   editbutton:'(//p[text()="Edit"])[1]',

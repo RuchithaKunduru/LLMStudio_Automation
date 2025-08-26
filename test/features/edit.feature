@@ -12,21 +12,19 @@ Background:
     Then user should see assistant Project page
    
 
-  Scenario: Verify Edit Section
-
-   # Verify Project Details in Edit section
+Scenario: Verify Edit Section
     Given user clicks on the "Edit" section
     When user edit "Project Description" as "Functionality testing1 on LLM studio"
-    When user click on "Save" button
+    And user click on "Save" button
     Then user should see success message
 
   # Verify AI Assistant’s Name in Edit section
-   When user edit "AI Assistant’s Name" as a random value
-   When user click on "Save" button
-   Then user should see success message
+    When user edit "AI Assistant’s Name" as a random value
+    And user click on "Save" button
+    Then user should see success message
  
   #Verify Contact Options in edit section
-   When user edit "Contact Options" as a value
-   When user click on "Save" button
-   Then user should see success message
+    When user edit "Contact Options" as a value
+    And user click on "Save" button
+    Then user should see success message
  
