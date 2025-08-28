@@ -13,15 +13,6 @@ Then("user should see details about assistant", async function () {
   await loginPage.verifyAssistantPage();
 });
 
-When("user clicks on assistant Project details", async function () {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.projectDetails();
-});
-
-Then("user should see assistant Project page", async function () {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.verifyEditButton();
-});
 When("user clicks on edit link", async function () {
   const loginPage = new EditPage(this.page!);
   await loginPage.clickEditLink();
