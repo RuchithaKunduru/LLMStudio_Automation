@@ -16,13 +16,7 @@ export class EditPage {
     await expect(this.page.locator(locators.verifyAssistantProject)).toBeVisible();
    
   }
-  async projectDetails(){
-    await this.page.click(locators.verifyAssistantProject);
-  }
-  async verifyEditButton(){
-    await this.page.waitForSelector(locators.editbutton);
-        await expect(this.page.locator(locators.editbutton)).toBeVisible();
-  }
+  
   async EditProjectDetails(Description:string,edit:string){
     await this.page.locator(locators.Description(Description));
     const randomName=await this.getUniqueUser();
