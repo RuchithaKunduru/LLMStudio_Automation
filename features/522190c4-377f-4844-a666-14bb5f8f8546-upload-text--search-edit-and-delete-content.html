@@ -849,15 +849,15 @@ body.darkmode .navbar-text {
                 
             </div>
             <h1>Feature:
-                <small>Edit Feature</small>
+                <small>Upload text, search,edit and delete content</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    edit.feature
+                    content.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    features/edit.feature</p>
+                    features/content.feature</p>
             
         </div>
 
@@ -904,7 +904,7 @@ body.darkmode .navbar-text {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -914,6 +914,17 @@ body.darkmode .navbar-text {
                             </p>
                         </td>
                         <td class="percentage">0.00 %</td>
+                    
+                    <tr>
+                        <td>
+                            <p data-bs-toggle="tooltip" data-placement="left"
+                               title="Scenario has double step implementation and failed because of that.">
+                                <i class="fa fa-flash ambiguous-color"></i>
+                                Ambiguous
+                            </p>
+                        </td>
+                        <td class="percentage">100.00 %</td>
+                    </tr>
                     
                     
                     </tr>
@@ -1044,7 +1055,7 @@ body.darkmode .navbar-text {
                     
                 </div>
 
-                <h2>Scenario: <small>Verify Edit Section</small></h2>
+                <h2>Scenario: <small>User validates the content of the uploaded text files</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1052,16 +1063,26 @@ body.darkmode .navbar-text {
                     </li>
 
                     
-
-                    
-
+                        <li>
+                            <span class="step ambiguous-background" data-bs-toggle="tooltip" data-placement="top" title="Scenario has double step implementation and failed because of that.">
+                            1
+                            </span>
+                        </li>
                     
 
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-bs-toggle="tooltip" title="Scenario passed">18</span>
+                            <span class="step skipped-background" data-bs-toggle="tooltip" title="Scenario is skipped">8</span>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-bs-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1346,7 +1367,7 @@ body.darkmode .navbar-text {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">When </span>
+                                    <span class="keyword highlight">Given </span>
 
                                     
                                         user searches for any existing assistant "anitaassistant"
@@ -1467,8 +1488,8 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step has double step implementation and failed because of that.">
+                                            <i class="fa fa-flash fa-2x ambiguous-color"></i>
                                         </div>
                                     
                                 
@@ -1531,8 +1552,8 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
@@ -1541,7 +1562,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        user should see assistant Project page
+                                        user should see the main panel of the assistant
                                         
                                     
 
@@ -1595,8 +1616,8 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
@@ -1605,7 +1626,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Given </span>
 
                                     
-                                        user clicks on the "Edit" section
+                                        user clicks on the "Content " section
                                         
                                     
 
@@ -1659,17 +1680,17 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">When </span>
+                                    <span class="keyword highlight">And </span>
 
                                     
-                                        user edit "Project Description" as "Functionality testing1 on LLM studio"
+                                        user clicks on "Text" file
                                         
                                     
 
@@ -1723,14 +1744,206 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">When </span>
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user click on "Upload Text" button
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user enters content title as "Content Testing"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        user enters the text content "This is a sample text content for testing purposes."
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
 
                                     
                                         user click on "Save" button
@@ -1787,8 +2000,8 @@ body.darkmode .navbar-text {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-bs-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
@@ -1797,391 +2010,7 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        user should see success message
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user edit "AI Assistant’s Name" as a random value
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user click on "Save" button
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        user should see success message
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user edit "Contact Options" as a value
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">When </span>
-
-                                    
-                                        user click on "Save" button
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        user should see success message
+                                        user should be able to see success message as "File updated successfully"
                                         
                                     
 
@@ -2294,11 +2123,11 @@ body.darkmode .navbar-text {
                     ],
                     datasets: [{
                         data: [
+                            0,
+                            0,
+                            0,
+                            0,
                             1,
-                            0,
-                            0,
-                            0,
-                            0,
                             0
                         ],
                         backgroundColor: [
