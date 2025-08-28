@@ -14,6 +14,6 @@ module.exports = {
     '--require test/support/**/*.ts',
     '--format json:test/test-results/report.json', 
     // '--publish-quiet',
-    'test/features/**/*.feature'
+    'test/features/**/**.feature'
   ].join(' ')
 };
