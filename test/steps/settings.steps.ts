@@ -13,7 +13,7 @@ When("user click on {string} radio button", async function (CopilotButton: strin
 // Send text in Chat Initial Message
 When('user enter text in Chat Initial Message input box', async function () {
   const settingsPage = new SettingsPage(this.page!);
-  await settingsPage.ChatInitialMessage("Hi How may I help You??");
+  await settingsPage.chatInitialMessage("Hi How may I help You??");
 });
 
 Then('Chat Initial Message input box should contain {string}', async function (expectedText: string) {
@@ -25,7 +25,7 @@ Then('Chat Initial Message input box should contain {string}', async function (e
 // Send text in Outdated Chat reply Message
 When('user enter text in Outdated Chat reply Message input box', async function () {
   const settingsPage = new SettingsPage(this.page!);
-  await settingsPage.OutdatedChatreplyMessage("Ok, got it. Let me work on it and I’ll get back to you in a moment.");
+  await settingsPage.outdatedChatreplyMessage("Ok, got it. Let me work on it and I’ll get back to you in a moment.");
 });
 
 Then('Chat Outdated Chat input box should contain {string}', async function (expectedText: string) {

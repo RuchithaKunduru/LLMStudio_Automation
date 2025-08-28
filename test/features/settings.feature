@@ -4,10 +4,8 @@ Background:
     When user login with valid credentials
     When user click on "Sign In" button
     And user should land on the dashboard
-
     When user searches for any existing assistant "anitaassistant"
     Then user should see details about assistant
-
     When user clicks on assistant Project details
     Then user should see assistant Project page
 
