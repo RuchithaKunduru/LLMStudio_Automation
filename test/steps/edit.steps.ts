@@ -2,44 +2,48 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import { EditPage } from "../pages/editPage";
 import { CustomWorld } from "../support/custom-world";
 import testData from "../test-data/test-data.json";
+import { generateRandomName } from "../../utils/generteRandomName";
+
 
 When("user search AI Assistant {string}", async function (string) {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.searchAssistant(string);
+  const editPage = new EditPage(this.page!);
+  await editPage.searchAssistant(string);
 });
 
 Then("user should see details about assistant", async function () {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.verifyAssistantPage();
+  const editPage = new EditPage(this.page!);
+  await editPage.verifyAssistantPage();
 });
 
-When("user clicks on edit link", async function () {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.clickEditLink();
+//Edit Description
+When("user provides the project description {string} in edit section", async function (description: string) {
+  const editPage = new EditPage(this.page!);
+  const randomDescription = generateRandomName(description);
+  this.projectDescription = randomDescription;
+  await editPage.editDescription("Project Description", randomDescription);
 });
 
-//Edit Project Details
-When("user edit {string} as {string}", async function (string, string2) {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.EditProjectDetails(string, string2);
+//Edit AI-Assistant Name
+When("user provides the assistant name {string} in edit section", async function (name: string) {
+  const editPage = new EditPage(this.page!);
+  const randomName = generateRandomName(name);
+  this.assistantName = randomName;
+  console.log("Generated Assistant Name:", randomName);
+  await editPage.verifyAssistantName(randomName);
 });
+
+//Edit Contact options
+When("user provides the contact options {string} in edit section", async function (contact: string) {
+  const editPage = new EditPage(this.page!);
+  const randomContact = generateRandomName(contact);
+  this.contactOption = randomContact;
+  await editPage.editContactOptions(randomContact);
+});
+
+//Verify Success message
 Then("user should see success message", async function () {
   const loginPage = new EditPage(this.page!);
   await loginPage.verifySuccessMessage();
 });
-// Edit AI Assistant’s Name
-When("user edit {string} as a random value", async function (string) {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.AIassistantName();
-});
 
-// Edit AI Contact Options
-When("user edit {string} as a value", async function (string) {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.contactOptions();
-});
-// Edit AI Assistant’s Boundaries
-When("When user edit {string} as a value for edit", async function (string) {
-  const loginPage = new EditPage(this.page!);
-  await loginPage.assistantBoundaries();
-});
+

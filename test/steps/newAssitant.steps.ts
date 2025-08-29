@@ -8,8 +8,7 @@ When("user clicks on {string} button", async function (string) {
   const assistantPage = new AssistantPage(this.page!);
   await assistantPage.clickCreateNewAssistant();
 });
-
-When("provides the assistant name {string}", async function (name: string) {
+When("user provides the assistant name {string}", async function (name: string) {
   const assistantPage = new AssistantPage(this.page!);
   const randomName = generateRandomName(name);
   this.assistantName = randomName;

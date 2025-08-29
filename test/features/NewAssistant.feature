@@ -10,7 +10,7 @@ Background:
 Scenario: User creates and verifies an Assistant
 
     When user click on "+ Create New Assistant" button
-    And provides the assistant name "QAAssistant"
+    And user provides the assistant name "QAAssistant"
     And selects the assistant type as "Normal"
     And clicks on vector database as "AlloyDB"
     And provides the description "This is used for testing."
