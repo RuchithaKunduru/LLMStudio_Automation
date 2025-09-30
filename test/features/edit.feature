@@ -21,7 +21,7 @@ Background:
     Then user should see success message
 
   # Verify AI Assistant’s Name in Edit section
-   When user edit "AI Assistant’s Name" as a random value
+   When user provides the assistant name "AnitaAssistant" in edit section
    When user click on "Save" button
    Then user should see success message
  
